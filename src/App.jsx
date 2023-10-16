@@ -2,6 +2,7 @@ import { CssBaseline, ThemeProvider, Box } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import Header from "./components/Header.jsx";
 import { Routes, Route } from "react-router-dom"
+import Home from "./pages/Home";
 const App = () => {
   const [theme, colorMode] = useMode();
 
@@ -14,6 +15,9 @@ const App = () => {
         >
           <Header />
           <Routes>
+
+          <Route index element = {<Home /> } />
+
 
           </Routes>
 

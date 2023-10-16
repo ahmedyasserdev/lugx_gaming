@@ -21,7 +21,7 @@ const Header = () => {
     const toggleDrawer = () => setOpen(!open);
 
     const linkStyle = {
-        fontSize: {xs : "15px" , md : "20px" },
+        fontSize: {xs : "15px" , md : "18px" },
         textTransform: "capitalize",
         fontWeight: 300,
         letterSpacing: "2px",
@@ -50,20 +50,22 @@ const Header = () => {
         opacity: open ? 1 : 0,
         visibility: open ? "visible" : "hidden",
         transition: "transform 300ms linear , opacity 300ms linear ",
+        p : "20px",
+        borderRadius : "12px", 
     };
 
     return (
         <Box
             sx={{
                 backgroundColor: theme.palette.mainColor.primary,
-                borderBottomLeftRadius: "35px",
-                borderBottomRightRadius: "35px",
+                // borderBottomLeftRadius: "35px",
+                // borderBottomRightRadius: "35px",
                 position: 'sticky',
                 top: 0,
-                zIndex: 2,
+                zIndex: 1000,
             }}
         >
-            <Box sx={{ width: "90%", mx: "auto", p: "15px", display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid rgba(255, 255, 255, 0.2)" }}>
+            <Box sx={{ width: "90%", mx: "auto", py: "15px", display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid rgba(255, 255, 255, 0.2)" }}>
                 <Box sx = {{width : { xs : "125px" , md : "158px"} }} >
                     <img src={logo} alt="logo"  />
                 </Box>

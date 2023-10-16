@@ -9,6 +9,8 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+
 a {
   text-decoration: none !important;
 }
@@ -24,4 +26,12 @@ p {
   color: #4a4a4a;
 }
 
-
+.hero-title::after {
+  position: absolute;
+  background-image: url(/images/caption-dec.png);
+  width: 202px;
+  height: 12px;
+  content: '';
+  left: 130px;
+  bottom: 0;
+}
