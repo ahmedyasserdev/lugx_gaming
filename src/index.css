@@ -16,14 +16,18 @@ a {
 }
 
 .heading{
-  color: #1e1e1e;
-  font-weight: 700;
+  color: #1e1e1e !important ;
+  font-weight: 700  !important;
 }
 
 p {
   font-size: 14px;
   line-height: 28px;
   color: #4a4a4a;
+}
+
+.hero-title {
+  position : relative ;
 }
 
 .hero-title::after {
@@ -35,3 +39,4 @@ p {
   left: 130px;
   bottom: 0;
 }
+
