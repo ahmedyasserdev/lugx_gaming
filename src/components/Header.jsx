@@ -4,13 +4,8 @@ import { Link, useLocation } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import logo from "/images/logo.png";
+import { links } from '../data/links';
 
-const links = [
-  { title: "home", path: "/" },
-  { title: "our shop", path: "/shop" },
-  { title: "product details", path: "/products" },
-  { title: "contact us", path: "/contact" },
-];
 
 const Header = () => {
   const theme = useTheme();
@@ -80,9 +75,11 @@ const Header = () => {
       }}
     >
       <Box sx={{ width: "90%", mx: "auto", py: "15px", display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid rgba(255, 255, 255, 0.2)", transition: "opacity 300ms linear" }}>
-        <Box sx={{ width: { xs: "125px", md: "158px" } }}>
-          <img src={logo} alt="logo" />
-        </Box>
+      <Box sx={{ width: { xs: "125px", md: "158px" } }}>
+      <Link to = "/" >
+           <img src={logo} alt="logo" />
+           </Link>
+         </Box>
 
         {isMobile ? (
           <IconButton onClick={toggleDrawer} sx={{ color: "white" }}>
@@ -106,7 +103,7 @@ const Header = () => {
               <Link key={i} to={path} onClick={toggleDrawer}>
                 <Typography
                   textTransform="capitalize"
-                  variant="a" color={location === path ? theme.palette.lightRed.primary : "#1e1e1e"}>
+                  variant="a" color={location === path ? theme.palette.secondColor.primary : "#1e1e1e"}>
                   {title}
                 </Typography>
               </Link>

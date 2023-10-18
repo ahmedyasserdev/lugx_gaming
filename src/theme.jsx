@@ -15,8 +15,8 @@ export const getDesignTokens = (mode) => {
             secondColor : {
                 primary : "#ee626b"
             },
-            lightRed : {
-                primary : '#ee626b'
+            nuetral : {
+                primary : '#1e1e1e'
             }
          
           }
@@ -28,8 +28,8 @@ export const getDesignTokens = (mode) => {
                   primary : "#ee626b"
               },
 
-                 lightRed : {
-                primary : '#ee626b'
+              nuetral : {
+                primary : '#1e1e1e'
             }
            
             
