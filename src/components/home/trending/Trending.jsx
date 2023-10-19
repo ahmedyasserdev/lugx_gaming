@@ -16,6 +16,8 @@ const Trending = () => {
         position: 'relative',
         backgroundColor: '#eeeeee',
         borderRadius: '25px',
+        transition : "100ms ease" ,
+        "&:hover .title" : {color : theme.palette.mainColor.primary }  ,
     };
 
     const cardMediaStyles = {
@@ -41,7 +43,7 @@ const Trending = () => {
         <Box sx={{ width: '90%', mx: 'auto', mt: { xs: '80px', md: '150px' } }}>
             <ViewAll subtitle="TRENDING" title="Trending Games" />
 
-            <Stack mt={2} direction="row" flexWrap="wrap" alignItems="center" gap="12px">
+            <Stack mt={2} direction="row" flexWrap="wrap"  justifyContent={"center"} alignItems="center" gap="12px">
                 {trendingGames.map(({ id, img, type, title, discount, price }) => (
                     <Card key={id} sx={cardStyles}>
                         <Link to={`/game/${id}`}>
@@ -49,10 +51,10 @@ const Trending = () => {
                                 <CardMedia title={title} sx={cardMediaStyles} image={img} />
                             </motion.div>
                             <CardContent>
-                                <Typography variant="body2" fontSize="14px" color="#7a7a7a7" textTransform="capitalize" gutterBottom>
+                                <Typography variant="body2" fontSize="14px" color="#7a7a7a" textTransform="capitalize" gutterBottom>
                                     {type}
                                 </Typography>
-                                <Typography variant="h5" fontSize="22px" fontWeight={600} color={theme.palette.nuetral.primary}>
+                                <Typography className = "title" variant="h5" fontSize="22px" fontWeight={600} color={theme.palette.nuetral.primary}>
                                     {title}
                                 </Typography>
 

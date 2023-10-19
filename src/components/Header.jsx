@@ -53,7 +53,7 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      setIsScrolled(scrollTop > 0);
+      setIsScrolled(scrollTop > 1000  );
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -65,9 +65,10 @@ const Header = () => {
   return (
     <Box
       sx={{
-        backgroundColor: theme.palette.mainColor.primary,
+        backgroundColor:   theme.palette.mainColor.primary  ,
         borderBottomLeftRadius: isScrolled ? "35px" : 0,
         borderBottomRightRadius: isScrolled ? "35px" : 0,
+        isolation : "isolate" ,
         position: 'sticky',
         top: 0,
         zIndex: 1000,
