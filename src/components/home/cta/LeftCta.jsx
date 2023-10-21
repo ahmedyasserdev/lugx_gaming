@@ -8,7 +8,7 @@ const LeftCta = () => {
     const containerStyles = {
         backgroundColor: "#f7f7f7",
         padding: { xs: "30px", md: "80px" },
-        borderRadius: "15px",
+        borderRadius: "25px",
         width: { md: "40%" },
     };
 

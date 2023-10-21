@@ -81,42 +81,53 @@ export const games = [
         title  : 'Assasin Creed' ,
         type : 'adventure' ,
         img : topGames01,
-        isTop : true
+        isTop : true,
+        price : 50
     },
     {
        id : 10,
         title  : 'Assasin Creed' ,
         type : 'adventure' ,
         img : topGames02,
-        isTop : true
+        isTop : true,
+        price : 100
+
     },
     {
        id : 11,
         title  : 'Assasin Creed' ,
         type : 'adventure' ,
         img : topGames03,
-        isTop : true
+        isTop : true,
+        price : 80
+
     },
     {
        id : 12,
         title  : 'Assasin Creed' ,
         type : 'adventure' ,
         img : topGames04,
-        isTop : true
+        isTop : true,
+        price : 70
+
     },
     {
        id : 13,
         title  : 'Assasin Creed' ,
         type : 'adventure' ,
         img : topGames05,
-        isTop : true
+        isTop : true,
+        price : 50
+
     },
     {
        id : 14,
         title  : 'Assasin Creed' ,
         type : 'adventure' ,
         img : topGames06,
-        isTop : true
+        isTop : true,
+        price : 120
+
     },
 
 

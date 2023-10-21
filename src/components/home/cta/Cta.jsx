@@ -1,8 +1,8 @@
 import React from 'react'
-import { Box, Stack, Typography, TextField, useTheme } from "@mui/material"
+import { Box, Stack, useTheme } from "@mui/material"
 import LeftCta from './LeftCta';
+import RightCta from './RightCta';
 const Cta = () => {
-    const theme = useTheme()
     return (
         <Box
             className="cta"
@@ -10,7 +10,8 @@ const Cta = () => {
             sx={{
                 width: "90%",
                 mx: "auto",
-                mt: 25
+                mt: {md : 20},
+                pb : 10
             }}
         >
             <Stack
@@ -19,6 +20,8 @@ const Cta = () => {
                 flexWrap="wrap" gap="20px"
             >
               <LeftCta />
+
+              <RightCta />
 
 
             </Stack>

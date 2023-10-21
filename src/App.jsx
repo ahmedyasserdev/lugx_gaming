@@ -3,6 +3,7 @@ import { ColorModeContext, useMode } from "./theme";
 import Header from "./components/Header.jsx";
 import { Routes, Route } from "react-router-dom"
 import Home from "./pages/Home";
+import Game from "./pages/Game";
 const App = () => {
   const [theme, colorMode] = useMode();
 
@@ -17,6 +18,7 @@ const App = () => {
           <Routes>
 
           <Route index element = {<Home /> } />
+          <Route path = "/game/:id" element = {<Game /> } />
 
 
           </Routes>
