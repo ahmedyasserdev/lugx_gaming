@@ -1,42 +1,19 @@
 import  { createContext, useState, useMemo } from "react"
 import { createTheme } from "@mui/material/styles";
 
-export const getDesignTokens = (mode) => {
-
-  return {
-    palette: {
-      mode,
-      ...(mode === "light"
-        ? {
-            // palette values for light mode
-            mainColor: {
-              primary: "#0071f8",
-            },
-            secondColor : {
-                primary : "#ee626b"
-            },
-            nuetral : {
-                primary : '#1e1e1e'
-            }
-         
-          }
-        : {
-            mainColor: {
-                primary: "#0071f8",
-              },
-              secondColor : {
-                  primary : "#ee626b"
-              },
-
-              nuetral : {
-                primary : '#1e1e1e'
-            }
-           
-            
-          }),
+export const getDesignTokens = () => ({
+  palette: {
+    mainColor: {
+      primary: "#0071f8",
     },
-  };
-};
+    secondColor : {
+      primary : "#ee626b"
+    },
+    nuetral : {
+      primary : '#1e1e1e'
+    }
+  },
+});
 
 export const ColorModeContext = createContext({
   toggleColorMode: () => {},
@@ -55,6 +32,6 @@ export const useMode = () => {
     []
   );
 
-  const theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
+  const theme = useMemo(() => createTheme(getDesignTokens()), []);
   return [theme, colorMode];
 };
