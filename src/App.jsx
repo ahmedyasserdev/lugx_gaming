@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom"
 import Home from "./pages/Home";
 import Game from "./pages/Game";
 import Shop from "./pages/Shop";
+import Contact from "./pages/Contact";
 const App = () => {
   const [theme, colorMode] = useMode();
 
@@ -21,6 +22,7 @@ const App = () => {
           <Route index element = {<Home /> } />
           <Route path = "/game/:id" element = {<Game /> } />
           <Route path = "/shop" element = {<Shop /> } />
+          <Route path = "/contact" element = {<Contact /> } />
 
 
           </Routes>

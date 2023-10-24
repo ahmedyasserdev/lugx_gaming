@@ -15,7 +15,7 @@ const PageHeading = ({title}) => {
     }}
     
     >
-        <Typography variant="h3" fontWeight = {700} textTransform = "uppercase"   color="white">{title}</Typography>
+        <Typography className = "page-title"  variant="h3" fontWeight = {700} textTransform = "uppercase"   color="white">{title}</Typography>
     
     </Box>
   )

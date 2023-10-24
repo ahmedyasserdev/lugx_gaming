@@ -1,9 +1,10 @@
 import React from 'react'
 import {Button , useTheme } from "@mui/material"
-const MainBtn = ({title , padding = "1em 2em" }) => {
+const MainBtn = ({title , padding = "1em 2em" , type = "button" }) => {
     const theme = useTheme()
   return (
-    <Button
+    <Button 
+    type = {type}
         sx = {{
             backgroundColor : theme.palette.secondColor.primary ,
             borderRadius : "100px" ,

@@ -26,11 +26,11 @@ p {
   color: #4a4a4a;
 }
 
-.hero-title {
+.hero-title , .page-title {
   position : relative ;
 }
 
-.hero-title::after {
+.hero-title::after  , .page-title::after{
   position: absolute;
   background-image: url(/images/caption-dec.png);
   width: 202px;
@@ -40,6 +40,15 @@ p {
   bottom: 0;
 }
 
+.page-title::after {
+  bottom: -15px   ;
+  left: 50% ;
+  transform:translateX(-50%) ;
+  -webkit-transform:translateX(-50%) ;
+  -moz-transform:translateX(-50%) ;
+  -ms-transform:translateX(-50%) ;
+  -o-transform:translateX(-50%) ;
+}
 
 
 @media (min-width  : 992px ) {
