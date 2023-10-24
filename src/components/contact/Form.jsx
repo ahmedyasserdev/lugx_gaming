@@ -35,10 +35,10 @@ const Form = () => {
   return (
     <Box mt  ={{xs: 4 , md : 0}}  width={{ md: "48%" }} ms="auto"  component="form">
       <Box display="flex" gap={{ xs : "25px" , md: "20px" }} flexWrap="wrap">
-        <TextField sx={inputStyles} placeholder="Your Name..." />
-        <TextField sx={inputStyles} placeholder="Your Surname..." />
-        <TextField sx={inputStyles} placeholder="Your E-mail..." />
-        <TextField sx={inputStyles} placeholder="Your Subject..." />
+      <TextField sx={inputStyles} placeholder="Your Name..." required />
+      <TextField sx={inputStyles} placeholder="Your Surname..." required />
+      <TextField sx={inputStyles} placeholder="Your E-mail..." required />
+      <TextField sx={inputStyles} placeholder="Your Subject..." required />
       </Box>
 
       <Box mt = {4} >
@@ -49,7 +49,7 @@ const Form = () => {
       </Box>
    
     <Box mt = {3} >
-    <MainBtn title = "send Message Now" />
+    <MainBtn title = "send Message Now" type = "submit" />
     
     
     </Box>

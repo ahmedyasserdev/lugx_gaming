@@ -5,6 +5,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import logo from "/images/logo.png";
 import { links } from '../data/links';
+import MainBtn from './MainBtn';
 
 
 const Header = () => {
@@ -14,7 +15,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
-  const toggleDrawer = () => setOpen(!open);
+  const toggle = () => setOpen(!open);
 
   const linkStyle = {
     fontSize: { xs: "15px", md: "18px" },
@@ -83,11 +84,11 @@ const Header = () => {
          </Box>
 
         {isMobile ? (
-          <IconButton onClick={toggleDrawer} sx={{ color: "white" }}>
+          <IconButton onClick={toggle} sx={{ color: "white" }}>
             {open ? <CloseIcon /> : <MenuIcon />}
           </IconButton>
         ) : (
-          <Box sx={{ display: 'flex', gap: 2 }}>
+          <Box sx={{ display: 'flex', gap: 2 , alignItems : "center" }}>
             {links.map(({ title, path }, i) => (
               <Link key={i} to={path} >
                 <Typography variant="a" color="white" sx={location === path ? activeLinkStyle : linkStyle}>
@@ -95,20 +96,24 @@ const Header = () => {
                 </Typography>
               </Link>
             ))}
+            <MainBtn title = {"sign in"} padding = ".5em 1em "  />
           </Box>
         )}
 
         {isMobile && (
           <Box sx={{ ...menuStyle, mt: "20px" }}>
             {links.map(({ title, path }, i) => (
-              <Link key={i} to={path} onClick={toggleDrawer}>
+              <Link key={i} to={path} onClick={toggle}>
                 <Typography
                   textTransform="capitalize"
                   variant="a" color={location === path ? theme.palette.secondColor.primary : "#1e1e1e"}>
                   {title}
                 </Typography>
               </Link>
-            ))}
+              ))}
+              <MainBtn title = {"sign in"} padding = ".5em 1em "  />
+
+
           </Box>
         )}
       </Box>
